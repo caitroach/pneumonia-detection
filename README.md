@@ -72,6 +72,12 @@ To train the model, run:
 I plan to improve the model's accuracy, possibly exploring transfer learning for higher efficiency. I would love to deploy this project as a FastAPI Web App in the near future as well.
 
 ## Acknowledgements 
+### Dataset 
+You can find the dataset I used here: [Paul Mooney: Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data)
+
+These X-ray images were selected from cohorts of pediatric patients of one to five years old from Guangzhou Women and Children's Medical Center in Guangzhou, China. All imaging was performed as part of routine patient care.
+
+### Resources
 I referenced lots of tutorials, documentation, research papers, and YouTube videos to build this project. Here are some of the resources I used:  
 - [GeeksForGeeks: Pneumonia Detection Using CNN in Python](https://www.geeksforgeeks.org/pneumonia-detection-using-cnn-in-python/)
 - [D. Varshni, K. Thakral, L. Agarwal, R. Nijhawan and A. Mittal, "Pneumonia Detection Using CNN based Feature Extraction," 2019](https://ieeexplore.ieee.org/document/8869364)
