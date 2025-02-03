@@ -38,7 +38,7 @@ test_loss, test_accuracy = model.evaluate(test_images, test_labels)
 print(f"Test accuracy: {test_accuracy*100:2f}%")
 
 if test_accuracy*100 > 85: 
-    #Save the model 
+    #Save the model IF it's good enough... ¯\(°_o)/¯
     model.save("pneumonia_model.keras")
     print("Model saved successfully!")
 
