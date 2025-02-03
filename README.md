@@ -1,5 +1,5 @@
 # AI-Powered Pneumonia Detection 
-Built using Keras and trained on a dataset of 5,000+ X-ray images, this project is a Convolutional Neural Network (CNN) trained to detect viral and bacterial pneumonia in chest X-rays with an accuracy of ~90%. 
+Built using Keras and trained on a dataset of 5,000+ X-ray images, this project is a Convolutional Neural Network (CNN) trained to detect viral and bacterial pneumonia in chest X-rays with a test accuracy of ~90%. 
 Get ready for the longest README you've ever seen...
 
 ## Table of contents
@@ -69,7 +69,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-I plan to improve the model's accuracy, possibly exploring transfer learning for higher efficiency. I would love to deploy this project as a FastAPI Web App in the near future as well.
+I plan to improve the model's accuracy, possibly exploring transfer learning for higher efficiency. I would love to deploy this project as a FastAPI Web App in the near future as well. I'll keep this repo updated! 
 
 ## Acknowledgements 
 ### Dataset 
