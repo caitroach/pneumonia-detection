@@ -1,4 +1,4 @@
-# AI-Powered Pneumonia Detection 
+# Pneumonia Detection With a Convolutional Neural Network
 Built using Keras and trained on a dataset of 5,000+ X-ray images, this project is a Convolutional Neural Network (CNN) trained to detect viral and bacterial pneumonia in chest X-rays with a test accuracy of ~90%. 
 Get ready for the longest README you've ever seen...
 
