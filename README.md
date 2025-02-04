@@ -23,7 +23,7 @@ It seems simple, but think about it: we aren't born knowing what triangles are. 
 
 Machine learning is very much similar. If you wanted to teach your computer what a triangle is, you'd collect dozens of triangle shapes, associate them with the label TRIANGLE, and show them to your program one by one, testing how well it knows its shapes. Over time, much like a human, your computer learns the characteristics of the shape, and is able to generalize them to shapes it's never seen before. 
 
-That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs: 
+That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs via [AlmaBetter](https://www.almabetter.com/bytes/articles/convolutional-neural-networks): 
 ![tweety](https://github.com/user-attachments/assets/a361b3c4-4875-4b49-a645-b8bfc24bb172)
 
 As a fun experiment, I decided to use this pattern recognition to identify viral and bacterial pneumonia from x-ray images. Unfortunately, lung structures are a little more complex than triangles, so we need to be careful with our data...
@@ -36,7 +36,7 @@ I found [my dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xra
 This dataset specifically had over 5,000 images split into train, validation, and test sets. 
 
 ### 2. Verifying the dataset 
-It's good practice to check out the structure of your dataset before doing anything with it. I used ```os```, a Python module for its operating system to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
+It's good practice to check out the structure of your dataset before doing anything with it. I used ```os```, a Python module for interacting with the operating system, to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
 
 ### 3. Visualizing the dataset 
 This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset, and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. 
@@ -50,8 +50,16 @@ There are many different ways to do this, but I wanted to make this from scratch
 I outlined the exact structure of the model, defining its architecture in a function called ```build_model```. 
 
 ### 6. Training the model
-I imported my ```build_model``` function from step 5, applying it to my organized and preprocessed dataset. By default, this program outputs a summary of the model architecture, tracking metrics like loss, training accuracy, and validation accuracy over each epoch. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data. Finally, it uses ```matplotlib``` to graph the validation and training accuracies over each epoch to check for overfitting (memorizing the training data instead of generalizing from it). I experimented with data augmentation, learning rate, optimizers, and dropout rates until I reached an accuracy I was happy with. I found that early stopping made a huge improvement in test accuracy because it prevented the model from memorizing its training data. 
+I imported my ```build_model``` function from step 5, applying it to my organized and preprocessed dataset. By default, this program outputs a summary of the model architecture.
+![modelarchitecture](https://github.com/user-attachments/assets/a04c85b0-5fc4-4718-bc03-947bcd24b466)
+
+Through each epoch, it tracks metrics like loss, training accuracy, and validation accuracy. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data over time. 
+![image](https://github.com/user-attachments/assets/42a8a16c-88a9-428f-943a-67d33ddc192b)
+
+Finally, it uses ```matplotlib``` to graph the validation and training accuracies over each epoch to check for overfitting (memorizing the training data instead of generalizing from it).
 ![pic2](https://github.com/user-attachments/assets/39400871-d28a-488b-83da-409c435da40c)
+
+I experimented with data augmentation, learning rate, optimizers, and dropout rates until I reached an accuracy I was happy with. I found that early stopping made a huge improvement in test accuracy because it prevented the model from memorizing its training data.
 
 ## Running the model 
 ### 1. Install dependencies
