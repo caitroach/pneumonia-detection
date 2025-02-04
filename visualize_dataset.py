@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt #To display images as visual plots 
 import cv2 #To load + process images 
 import os #For files 
+from config import YOUR_DATASET_PATH
 
 #Replace this with the path where your dataset is located! 
-dataset_path = r"C:\Users\Roach\Desktop\pneumonia_project\chest_xray" #Ignore backslashes 
+dataset_path = YOUR_DATASET_PATH 
 
 normal_folder = os.path.join(dataset_path, "train", "NORMAL")
 pneumonia_folder = os.path.join(dataset_path, "train", "PNEUMONIA")
