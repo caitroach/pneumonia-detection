@@ -32,8 +32,7 @@ As a fun experiment, I decided to use this pattern recognition to identify viral
 I worked on this project sequentially. This took two weeks and six steps: 
 
 ### 1. Finding a dataset 
-I found [my dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data) on Kaggle. Finding a high-quality dataset can be challenging - to train an accurate model, you need data that is optimally labelled, distributed, and organized. This particular dataset had a validation set with only eight images per class (NORMAL, PNEUMONIA), which led to inefficiencies in training. I manually redistributed the images after downloading them, leading to higher accuracy. 
-This dataset specifically had over 5,000 images split into train, validation, and test sets. 
+I found [my dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data) on Kaggle, which had over 5,000 images split into train, validation, and test sets. . Finding a high-quality dataset can be challenging - to train an accurate model, you need data that is optimally labelled, distributed, and organized. This particular dataset had a validation set with only eight images per class (NORMAL, PNEUMONIA), which led to inefficiencies in training. I manually redistributed the images after downloading them (moving from training to validation), leading to higher test accuracy overall. 
 
 ### 2. Verifying the dataset 
 It's good practice to check out the structure of your dataset before doing anything with it. I used ```os```, a Python module for interacting with the operating system, to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
