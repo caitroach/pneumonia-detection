@@ -1,5 +1,5 @@
 '''
-To give our model a chance, we need to pre-process our data!!
+To give our model a chance, we need to pre-process our data!
 We'll start by resizing every picture to a fixed size. 
 Then we'll normalize pixel values to get smaller ranges, which are easier to work with.
 '''
