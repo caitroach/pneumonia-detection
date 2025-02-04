@@ -35,10 +35,11 @@ I found [my dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xra
 This dataset specifically had over 5,000 images split into train, validation, and test sets. 
 
 ### 2. Verifying the dataset 
-It's good practice to check out the structure of your dataset. I used ```os```, a Python module for its operating system to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of your dataset before trying to train a machine learning model on it. 
+It's good practice to check out the structure of your dataset before doing anything with it. I used ```os```, a Python module for its operating system to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
 
 ### 3. Visualizing the dataset 
 This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset, and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. 
+![pic](https://github.com/user-attachments/assets/80e98b93-1c3b-4be3-ba94-fbdc97e24d5a)
 
 ### 4. Preprocessing the dataset
 Next, I needed to preprocess the dataset, standardizing our X-ray images so the model could learn patterns efficiently. I resized each image, converted them all to grayscale, normalized pixel values, and used binary classification (0 = Normal, 1 = Pneumonia) to simplify the data. By the end, all X-ray images are 128x128 grayscale images. This prepares our dataset for model training! 
@@ -48,7 +49,8 @@ There are many different ways to do this, but I wanted to make this from scratch
 I outlined the exact structure of the model, defining its architecture in a function called ```build_model```. 
 
 ### 6. Training the model
-I imported my ```build_model``` function from step 5, applying it to my preprocessed dataset. By default, this program outputs a summary of the model architecture, tracking metrics like loss, training accuracy, and validation accuracy over each epoch. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data. Finally, it uses ```matplotlib``` to graph the validation and training accuracies over each epoch to check for overfitting (memorizing the training data instead of generalizing from it). 
+I imported my ```build_model``` function from step 5, applying it to my organized and preprocessed dataset. By default, this program outputs a summary of the model architecture, tracking metrics like loss, training accuracy, and validation accuracy over each epoch. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data. Finally, it uses ```matplotlib``` to graph the validation and training accuracies over each epoch to check for overfitting (memorizing the training data instead of generalizing from it). I experimented with data augmentation, learning rate, optimizers, and dropout rates until I reached an accuracy I was happy with.
+![pic2](https://github.com/user-attachments/assets/39400871-d28a-488b-83da-409c435da40c)
 
 ## Running the model 
 ### 1. Install dependencies
@@ -69,7 +71,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-I plan to improve the model's accuracy, possibly exploring transfer learning for higher efficiency. I would love to deploy this project as a FastAPI Web App in the near future as well. I'll keep this repo updated! 
+I plan to improve the model's accuracy, possibly exploring transfer learning for higher efficiency and looking into more expansive datasets. I would love to deploy this project as a FastAPI Web App in the near future as well. I'll keep this repo updated! 
 
 ## Acknowledgements 
 ### Dataset 
@@ -85,4 +87,4 @@ I referenced lots of tutorials, documentation, research papers, and YouTube vide
 - [An Q, Chen W, and Shao W., "A Deep Convolutional Neural Network for Pneumonia Detection in X-ray Images with Attention Ensemble," 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC10887593/)
 
 ## Contributing
-I invite you to experiment with this code and improve the model's accuracy! Feel free to fork this repo and submit a pull request. If you have any questions (or you just want to show off), hit me up at roachc006@gmail.com! 
+I invite you to experiment with this code and improve the model's accuracy! Feel free to fork this repo and submit a pull request. If you have any questions (or you just want to show off), you can hit me up at roachc006@gmail.com or open an issue here on GitHub.
