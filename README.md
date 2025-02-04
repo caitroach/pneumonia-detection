@@ -26,7 +26,7 @@ Machine learning is very much similar. If you wanted to teach your computer what
 That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs via [AlmaBetter](https://www.almabetter.com/bytes/articles/convolutional-neural-networks): 
 ![tweety](https://github.com/user-attachments/assets/a361b3c4-4875-4b49-a645-b8bfc24bb172)
 
-As a fun experiment, I decided to use this pattern recognition to identify viral and bacterial pneumonia from x-ray images. Unfortunately, lung structures are a little more complex than triangles, so we need to be careful with our data...
+I decided to use this form of image recognition to identify viral and bacterial pneumonia from x-ray images. Unfortunately, lung structures are a little more complex than triangles, so I needed to clean up and preprocess the data before model training.
 
 ## Project components 
 I worked on this project sequentially. This took two weeks and six steps: 
@@ -42,7 +42,7 @@ This step is technically optional, but after verifying that you have a good data
 ![pic](https://github.com/user-attachments/assets/80e98b93-1c3b-4be3-ba94-fbdc97e24d5a)
 
 ### 4. Preprocessing the dataset
-Next, I needed to preprocess the dataset, standardizing our X-ray images so the model could learn patterns efficiently. I resized each image, converted them all to grayscale, normalized pixel values, and used binary classification (0 = Normal, 1 = Pneumonia) to simplify the data. By the end, all X-ray images are 128x128 grayscale images. This prepares our dataset for model training! 
+Next, I needed to preprocess the dataset, standardizing our X-ray images so the model could learn patterns efficiently. I resized each image, converted them all to grayscale, normalized pixel values, and used binary classification (0 = Normal, 1 = Pneumonia) to simplify the classification. By the end, all X-ray images were labelled 128x128 grayscale images, ready for training.
 
 ### 5. Designing the model
 There are many different ways to do this, but I wanted to make this from scratch. I used Keras (pronounced kinda like "carrots") - a popular Python library that allows us to make and test our beautiful model. Keras is built on TensorFlow, another open-source library for machine learning, except Keras makes this a little simpler because it provides a nice clean Python frontend for us to work in. 
