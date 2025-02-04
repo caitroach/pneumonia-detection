@@ -1,7 +1,7 @@
 import os 
+from config import YOUR_DATASET_PATH
 
-#Replace this with the path where your dataset is located!
-dataset_path = r"C:\Users\Roach\Desktop\pneumonia_project\chest_xray" #Ignore backslashes
+dataset_path = YOUR_DATASET_PATH 
 
 #We're going to iterate through each folder and sub-folder to count our images!
 for folder in ["train", "test", "val"]: 
