@@ -95,4 +95,4 @@ I referenced lots of tutorials, documentation, research papers, and YouTube vide
 - [An Q, Chen W, and Shao W., "A Deep Convolutional Neural Network for Pneumonia Detection in X-ray Images with Attention Ensemble," 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC10887593/)
 
 ## Contributing
-I invite you to experiment with this code and improve the model's accuracy! Feel free to fork this repo and submit a pull request. If you have any questions (or you just want to show off), you can hit me up at roachc006@gmail.com or open an issue here on GitHub.
+I invite you to experiment with this code and improve the model's accuracy! Feel free to fork this repo and submit a pull request. If you have any questions (or you just want to show off), you can hit me up at roachc006@gmail.com or post on [the discussion board](https://github.com/CaitlinRoach06/pneumonia-detection/discussions).
