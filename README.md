@@ -52,13 +52,15 @@ I outlined the exact structure of the model, defining its architecture in a func
 I imported my ```build_model``` function from step 5, applying it to my organized and preprocessed dataset. By default, this program outputs a summary of the model architecture.
 ![modelarchitecture](https://github.com/user-attachments/assets/a04c85b0-5fc4-4718-bc03-947bcd24b466)
 
-Through each epoch, it tracks metrics like loss, training accuracy, and validation accuracy. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data over time. 
+Through each epoch, it tracks metrics like loss, training accuracy, and validation accuracy. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data over time. This will fluctuate depending on your architecture, dataset, and the quality of your sacrifices to the TensorFlow gods. Here, it's around 85%. 
+
 ![image](https://github.com/user-attachments/assets/42a8a16c-88a9-428f-943a-67d33ddc192b)
 
-Finally, it uses ```matplotlib``` to graph the validation and training accuracies over each epoch to check for overfitting (memorizing the training data instead of generalizing from it).
+Finally, the program uses ```matplotlib``` to graph the validation and training accuracies over each epoch to check for inconsistencies like overfitting (memorizing the training data instead of learning from it).
+
 ![pic2](https://github.com/user-attachments/assets/39400871-d28a-488b-83da-409c435da40c)
 
-I experimented with data augmentation, learning rate, optimizers, and dropout rates until I reached an accuracy I was happy with. I found that early stopping made a huge improvement in test accuracy because it prevented the model from memorizing its training data.
+I experimented with data augmentation, learning rate, optimizers, and dropout rates until I reached an accuracy I was happy with. I found that early stopping made a huge improvement in test accuracy because it prevented the model from memorizing its training data instead of generalizing.
 
 ## Running the model 
 ### 1. Install dependencies
@@ -79,7 +81,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. I plan to integrate Grad-CAM heatmaps to show why the model makes a particular guess. I'll keep this repo updated! :D 
+Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. I plan to integrate Grad-CAM heatmaps to show why the model makes a particular guess, instead of running this as a blackbox. I'll keep this repo updated. Stay tuned! :D 
 
 ## Acknowledgements 
 ### Dataset 
