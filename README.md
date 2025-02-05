@@ -79,7 +79,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-I plan to improve the model's accuracy, possibly exploring transfer learning for higher efficiency and looking into more expansive datasets. I would love to deploy this project as a FastAPI Web App in the near future as well. I'll keep this repo updated! 
+Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. I plan to integrate Grad-CAM heatmaps to show why the model makes a particular guess. I'll keep this repo updated! :D 
 
 ## Acknowledgements 
 ### Dataset 
