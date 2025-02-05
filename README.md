@@ -38,7 +38,7 @@ I found [my dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xra
 It's good practice to check out the structure of your dataset before doing anything with it. I used ```os```, a Python module for interacting with the operating system, to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
 
 ### 3. Visualizing the dataset 
-This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset, and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. 
+This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset (if you can guess what CV stands for here, you get a prize), and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. 
 ![pic](https://github.com/user-attachments/assets/80e98b93-1c3b-4be3-ba94-fbdc97e24d5a)
 
 ### 4. Preprocessing the dataset
@@ -52,7 +52,7 @@ I outlined the exact structure of the model, defining its architecture in a func
 I imported my ```build_model``` function from step 5, applying it to my organized and preprocessed dataset. By default, this program outputs a summary of the model architecture.
 ![modelarchitecture](https://github.com/user-attachments/assets/a04c85b0-5fc4-4718-bc03-947bcd24b466)
 
-Through each epoch, it tracks metrics like loss, training accuracy, and validation accuracy. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data over time. This will fluctuate depending on your architecture, dataset, and the quality of your sacrifices to the TensorFlow gods. Here, it's around 85%. 
+Through each epoch, it tracks metrics like loss, training accuracy, and validation accuracy. At the end of every epoch, it outputs a final test accuracy, showing us how the model performs on unseen data over time. This will fluctuate depending on your architecture, dataset, and the quality of your sacrifices to the TensorFlow gods. Here, it's around 85%, but with early stopping, it ended up around 89.5%.
 
 ![image](https://github.com/user-attachments/assets/42a8a16c-88a9-428f-943a-67d33ddc192b)
 
@@ -81,7 +81,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. I plan to integrate Grad-CAM heatmaps to show why the model makes a particular guess, instead of running this as a blackbox. I'll keep this repo updated. Stay tuned! :D 
+Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. I plan to integrate Grad-CAM heatmaps to show why the model makes a particular guess, instead of running this as a blackbox. This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user. I'll keep this repo updated. Stay tuned! :D 
 
 ## Acknowledgements 
 ### Dataset 
