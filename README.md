@@ -81,7 +81,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. I plan to integrate Grad-CAM heatmaps to show why the model makes a particular guess, instead of running this as a blackbox. This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user. I'll keep this repo updated. Stay tuned! :D 
+Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. I plan to integrate Grad-CAM (Gradient-weighted Class Activation Mapping) heatmaps to show why the model makes a particular guess, instead of running this as a "black-box". This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user. I'll keep this repo updated. Stay tuned! :D 
 
 ## Acknowledgements 
 ### Dataset 
