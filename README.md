@@ -71,7 +71,7 @@ Make sure you have Python installed, then install dependencies:
 (You may need to use ```pip3``` instead of ```pip``` depending on your Python version.)
 
 ### 2. Clone the repo 
-```git clone https://github.com/CaitlinRoach06/pneumonia-detection.git```
+```git clone https://github.com/caitroach/pneumonia-detection.git```
 
 ```cd pneumonia-detection```
 
