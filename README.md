@@ -1,4 +1,5 @@
-# Pneumonia Detection With a Convolutional Neural Network
+# Pneumonia Detection With a Convolutional Neural Network ![Python](https://img.shields.io/badge/python-3.12.1-blue) ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
+
 Built using Keras and trained on a dataset of 5,000+ X-ray images, this project is a Convolutional Neural Network (CNN) trained to detect viral and bacterial pneumonia in chest X-rays with a test accuracy of ~90%. 
 Get ready for the longest README you've ever seen...
 
@@ -21,7 +22,10 @@ Pop quiz! What shape is this? 🔺
 
 It seems simple, but think about it: we aren't born knowing what triangles are. We learned in early childhood that this shape 🔺 is associated with the label "triangle", and we've seen thousands of triangles throughout our lives. By that process, we learned that triangles have key characteristics that other shapes do not. Even though triangles come in all shapes and colours, we can identify them through their key features. 
 
-Machine learning is very much similar. If you wanted to teach your computer what a triangle is, you'd collect dozens of triangle shapes, associate them with the label TRIANGLE, and show them to your program one by one, testing how well it knows its shapes. Over time, much like a human, your computer learns the characteristics of the shape, and is able to generalize them to shapes it's never seen before. 
+Machine learning is very similar! Here's how it works: 
+- You collect training data (like lots of triangle shapes)
+- You let the model learn key features, geenralizing from that data
+- Like a proud parent, you let it run free, classifying triangles and other shapes it's never seen before. Great success!
 
 That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs via [AlmaBetter](https://www.almabetter.com/bytes/articles/convolutional-neural-networks): 
 ![tweety](https://github.com/user-attachments/assets/a361b3c4-4875-4b49-a645-b8bfc24bb172)
@@ -35,7 +39,7 @@ I worked on this project sequentially. This took two weeks and six steps:
 I found [my dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data) on Kaggle, which had over 5,000 images split into train, validation, and test sets. Finding a high-quality dataset can be challenging - to train an accurate model, you need data that is optimally labelled, distributed, and organized. This particular dataset had a validation set with only eight images per class (NORMAL, PNEUMONIA), which led to inefficiencies in training. I manually redistributed the images after downloading them (moving from training to validation), leading to higher test accuracy overall. 
 
 ### 2. Verifying the dataset 
-It's good practice to check out the structure of your dataset before doing anything with it. I used ```os```, a Python module for interacting with the operating system, to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
+Always check your dataset out before using it! I used ```os```, a Python module for interacting with the operating system, to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
 
 ### 3. Visualizing the dataset 
 This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset (if you can guess what CV stands for here, you get a prize), and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. 
@@ -97,4 +101,4 @@ I referenced lots of tutorials, documentation, research papers, and YouTube vide
 - [An Q, Chen W, and Shao W., "A Deep Convolutional Neural Network for Pneumonia Detection in X-ray Images with Attention Ensemble," 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC10887593/)
 
 ## Contributing
-I invite you to experiment with this code and improve the model's accuracy! Feel free to fork this repo and submit a pull request. If you have any questions (or you just want to show off), you can hit me up at roachc006@gmail.com or post on [the discussion board](https://github.com/CaitlinRoach06/pneumonia-detection/discussions).
+I invite you to experiment with this code and improve the model's accuracy! Feel free to fork this repo and submit a pull request. If you have any questions (or you just want to show off), you can hit me up at roachc006@gmail.com or post on [the discussion board](https://github.com/caitroach/pneumonia-detection/discussions).
