@@ -24,7 +24,7 @@ It seems simple, but think about it: we aren't born knowing what triangles are. 
 
 Machine learning is very similar! Here's how it works: 
 - You collect training data (like lots of triangle shapes)
-- You let the model learn key features, geenralizing from that data
+- You let the model learn key features, generalizing from that data
 - Like a proud parent, you let it run free, classifying triangles and other shapes it's never seen before. Great success!
 
 That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs via [AlmaBetter](https://www.almabetter.com/bytes/articles/convolutional-neural-networks): 
