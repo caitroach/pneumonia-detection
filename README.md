@@ -4,13 +4,13 @@ Built using Keras and trained on a dataset of 5,000+ X-ray images, this project 
 Get ready for the longest README you've ever seen...
 
 ## Table of contents
-- [Why pneumonia?](https://github.com/CaitlinRoach06/pneumonia-detection/#why-pneumonia)
-- [What is a convolutional neural network?](https://github.com/CaitlinRoach06/pneumonia-detection/#what-is-a-convolutional-neural-network)
-- [Project components](https://github.com/CaitlinRoach06/pneumonia-detection/#project-components)
-- [Running the model](https://github.com/CaitlinRoach06/pneumonia-detection/#running-the-model)
-- [What's next?](https://github.com/CaitlinRoach06/pneumonia-detection/#whats-next)
-- [Acknowledgements](https://github.com/CaitlinRoach06/pneumonia-detection/#acknowledgements)
-- [Contributing](https://github.com/CaitlinRoach06/pneumonia-detection/#contributing)
+- [Why pneumonia?](https://github.com/caitroach/pneumonia-detection/#why-pneumonia)
+- [What is a convolutional neural network?](https://github.com/caitroach/pneumonia-detection/#what-is-a-convolutional-neural-network)
+- [Project components](https://github.com/caitroach/pneumonia-detection/#project-components)
+- [Running the model](https://github.com/caitroach/pneumonia-detection/#running-the-model)
+- [What's next?](https://github.com/caitroach/pneumonia-detection/#whats-next)
+- [Acknowledgements](https://github.com/caitroach/pneumonia-detection/#acknowledgements)
+- [Contributing](https://github.com/caitroach/pneumonia-detection/#contributing)
   
 ## Why pneumonia? 
 Pneumonia is a form of inflammation caused by a bacterial, viral, or fungal infection of the lungs. It is the single largest infectious cause of death in children worldwide and is most prominent in regions with high air pollution. For my first machine learning project, I decided to target a serious global healthcare issue, exploring the applications of machine learning to real-world issues.
@@ -39,10 +39,10 @@ I worked on this project sequentially. This took two weeks and six steps:
 I found [my dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data) on Kaggle, which had over 5,000 images split into train, validation, and test sets. Finding a high-quality dataset can be challenging - to train an accurate model, you need data that is optimally labelled, distributed, and organized. This particular dataset had a validation set with only eight images per class (NORMAL, PNEUMONIA), which led to inefficiencies in training. I manually redistributed the images after downloading them (moving from training to validation), leading to higher test accuracy overall. 
 
 ### 2. Verifying the dataset 
-Always check your dataset out before using it! I used ```os```, a Python module for interacting with the operating system, to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
+Always check your dataset out before using it! I used ```os``` to count each image in my dataset and output a list with the image distribution. This makes it easier to evaluate the quality of a dataset before trying to train a machine learning model on it. 
 
 ### 3. Visualizing the dataset 
-This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset (if you can guess what CV stands for here, you get a prize), and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. 
+This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset (if you can guess what CV stands for here, you get a prize), and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. In my dataset, I noticed that some images had vastly different sizes. Good to know. 🤔
 ![pic](https://github.com/user-attachments/assets/80e98b93-1c3b-4be3-ba94-fbdc97e24d5a)
 
 ### 4. Preprocessing the dataset
@@ -85,7 +85,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. Once I can figure out Streamlit, I plan to integrate Grad-CAM (Gradient-weighted Class Activation Mapping) heatmaps to show why the model makes a particular guess, instead of running this as a "black-box". This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user. I'll keep this repo updated. Stay tuned! :D 
+Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. Once I can figure out Streamlit, I plan to integrate Grad-CAM (Gradient-weighted Class Activation Mapping) heatmaps to show why the model makes a particular guess, instead of running this as a "black-box". This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user. I might also explore transfer learning, or merging with another dataset. I'll keep this repo updated. Stay tuned! :D 
 
 ## Acknowledgements 
 ### Dataset 
