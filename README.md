@@ -91,6 +91,7 @@ To train the model, run:
 - I only talked about accuracy here, which is not sufficient for healthcare applications, so I'm also going to also assess the model on metrics like precision and recall, F-1 Score, and specificity. I plan on plotting a confusion matrix to better visualize the model's mistakes.
 - Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. Once I can figure out Streamlit (😔), I plan to integrate Grad-CAM (Gradient-weighted Class Activation Mapping) heatmaps to show why the model makes a particular guess, instead of running this as a "black-box". This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user.
 - I might also explore transfer learning or merging datasets to improve overall performance. 
+
 I'll keep this repo updated. Stay tuned! :D 
 
 ## Acknowledgements 
