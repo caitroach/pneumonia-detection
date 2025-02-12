@@ -46,7 +46,7 @@ This step is technically optional, but after verifying that you have a good data
 ![pic](https://github.com/user-attachments/assets/80e98b93-1c3b-4be3-ba94-fbdc97e24d5a)
 
 ### 4. Preprocessing the dataset
-Next, I needed to preprocess the dataset, standardizing our X-ray images so the model could learn patterns efficiently. I resized each image, converted them all to grayscale, normalized pixel values, and used binary classification (0 = Normal, 1 = Pneumonia) to simplify the classification. By the end, all X-ray images were labelled 128x128 grayscale images, ready for training.
+Next, I needed to preprocess the dataset, standardizing our X-ray images so the model could learn patterns efficiently. I resized each image, converted them all to grayscale, normalized pixel values, and used binary classification (0 = Normal, 1 = Pneumonia) to simplify training. By the end, all X-ray images were labelled 128x128 grayscale images, ready for the model.
 
 ### 5. Designing the model
 There are many different ways to do this, but I wanted to make this from scratch. I used Keras (pronounced kinda like "carrots") - a popular Python library that allows us to make and test our beautiful model. Keras is built on TensorFlow, another open-source library for machine learning, except Keras makes this a little simpler because it provides a nice clean Python frontend for us to work in. 
@@ -88,7 +88,7 @@ To train the model, run:
 ```python model_training.py ```
 
 ## What's next?
-- I only talked about accuracy here, which is not sufficient for healthcare applications, so I'm also going to also assess the model on metrics like precision and recall, F-1 Score, and specificity. I plan on plotting a confusion matrix to better visualize the model's mistakes.
+- I only talked about accuracy here, which is not sufficient for healthcare applications because of the potential for false positives - or worse, false negatives. So I plan on assessing the model on metrics like precision and recall, F-1 Score, and specificity. I plan on plotting a confusion matrix to better visualize the model's mistakes.
 - Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. Once I can figure out Streamlit (😔), I plan to integrate Grad-CAM (Gradient-weighted Class Activation Mapping) heatmaps to show why the model makes a particular guess, instead of running this as a "black-box". This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user.
 - I might also explore transfer learning or merging datasets to improve overall performance. 
 
