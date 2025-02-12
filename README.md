@@ -24,10 +24,11 @@ It seems simple, but think about it: we aren't born knowing what triangles are. 
 
 Machine learning is very similar! Here's how it works: 
 - You collect training data (like lots of triangle shapes)
-- You let the model learn key features, generalizing from that data
-- Like a proud parent, you let it run free, classifying triangles and other shapes it's never seen before. Great success!
+- You let the model learn key features (three sides, three angles, three vertices), generalizing from that data
+- Like a proud parent, you watch as it runs free, classifying triangles and other shapes it's never seen before. Great success!
 
-That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs via [AlmaBetter](https://www.almabetter.com/bytes/articles/convolutional-neural-networks): 
+That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. (Cool, right?) The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs via [AlmaBetter](https://www.almabetter.com/bytes/articles/convolutional-neural-networks): 
+
 ![tweety](https://github.com/user-attachments/assets/a361b3c4-4875-4b49-a645-b8bfc24bb172)
 
 I decided to use this form of image recognition to identify viral and bacterial pneumonia from x-ray images. Unfortunately, lung structures are usually a little more complex than triangles or Looney Tunes characters, so I needed to clean up and preprocess the data before model training.
@@ -43,6 +44,7 @@ Always check your dataset out before using it! I used ```os``` to count each ima
 
 ### 3. Visualizing the dataset 
 This step is technically optional, but after verifying that you have a good dataset, it's a good idea to visualize your data to get an idea of what you are working with. In my program, I used ```os``` to look through file directories, ```cv2``` to load and process the images in my dataset (if you can guess what CV stands for here, you get a prize!), and ```matplotlib``` to visualize the data. The result was a 6x2 grid of images labelled either "NORMAL LUNGS" or "PNEUMONIA". This was a nice way to understand the differences between our classes, before we even start working with our model. In my dataset, I noticed that some images had vastly different sizes. Good to know. 🤔
+
 ![pic](https://github.com/user-attachments/assets/80e98b93-1c3b-4be3-ba94-fbdc97e24d5a)
 
 ### 4. Preprocessing the dataset
@@ -90,7 +92,7 @@ To train the model, run:
 ## What's next?
 - I only talked about accuracy here, which is not sufficient for healthcare applications because of the potential for false positives - or worse, false negatives. So I plan on assessing the model on metrics like precision and recall, F-1 Score, and specificity. I plan on plotting a confusion matrix to better visualize the model's mistakes.
 - Right now, I'm working on an interactive web app where users can upload a sample chest x-ray image for live predictions. Once I can figure out Streamlit (😔), I plan to integrate Grad-CAM (Gradient-weighted Class Activation Mapping) heatmaps to show why the model makes a particular guess, instead of running this as a "black-box". This will help visualize the regions of the x-ray that informed the model's decision, making its guess interpretable to the user.
-- I might also explore transfer learning or merging datasets to improve overall performance. 
+- I might also explore transfer learning or merging datasets to improve overall performance. The x-rays I used for this project were taken from only one age group in only one region (see [acknowledgements](https://github.com/caitroach/pneumonia-detection/#acknowledgements)), so it's not as diverse as it could be. Because of this, the model might struggle to make predictions in other populations. 
 
 I'll keep this repo updated. Stay tuned! :D 
 
