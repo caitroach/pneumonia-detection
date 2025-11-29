@@ -13,25 +13,7 @@ Get ready for the longest README you've ever seen...
 - [Contributing](https://github.com/caitroach/pneumonia-detection/#contributing)
   
 ## Why pneumonia? 
-Pneumonia is a form of inflammation caused by a bacterial, viral, or fungal infection of the lungs. It is the single largest infectious cause of death in children worldwide and is most prominent in regions with high air pollution. For my first ML project, I decided to target a serious global healthcare issue, exploring the applications of machine learning to real-world issues.
-
-## What is a convolutional neural network?
-Pop quiz! What shape is this? 🔺
-
-...I'm going to assume you got that right. A triangle! Good job. But how did you know? 
-
-It seems simple, but think about it: we aren't born knowing what triangles are. We learned in early childhood that this shape 🔺 is associated with the label "triangle", and we've seen thousands of triangles throughout our lives. By that process, we learned that triangles have key characteristics that other shapes do not. Even though triangles come in all shapes and colours, we can identify them through their key features. 
-
-Machine learning is very similar! Here's how it works: 
-- You collect training data (like lots of triangle shapes)
-- You let the model learn key features (three sides, three angles, three vertices), generalizing from that data
-- Like a proud parent, you watch as it runs free, classifying triangles and other shapes it's never seen before. Great success!
-
-That's where the "neural" in "neural network" comes from - we're using tech to mimic how our brains process information. (Cool, right?) The "convolution" in "convolutional neural network" (CNN) means that our image goes through little filters, making it easier for our model to detect meaningful patterns in the data and inform its learning. Rather than looking at each pixel individually, the computer looks at small sections of the image at a time, combining information to make its guesses. This convolution calculation helps the program understand the images we're showing it. Here's a more comprehensive look at image classification using CNNs via [AlmaBetter](https://www.almabetter.com/bytes/articles/convolutional-neural-networks): 
-
-![tweety](https://github.com/user-attachments/assets/a361b3c4-4875-4b49-a645-b8bfc24bb172)
-
-I decided to use this form of image recognition to identify viral and bacterial pneumonia from x-ray images. Unfortunately, lung structures are usually a little more complex than triangles or Looney Tunes characters, so I needed to clean up and preprocess the data before model training.
+Pneumonia is a form of inflammation caused by a bacterial, viral, or fungal infection of the lungs. It is the single largest infectious cause of death in children worldwide and is most prominent in regions with high air pollution. For my first ML project, I decided to target a serious global healthcare issue.
 
 ## Project components 
 I worked on this project sequentially. This took two weeks and six steps: 
